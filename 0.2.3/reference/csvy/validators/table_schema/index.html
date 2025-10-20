@@ -1,0 +1,2790 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../registry/">
+      
+      
+        <link rel="next" href="../../writers/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>table_schema - pyCSVY Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#csvy.validators.table_schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="pyCSVY Docs" class="md-header__button md-logo" aria-label="pyCSVY Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pyCSVY Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              table_schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="pyCSVY Docs" class="md-nav__button md-logo" aria-label="pyCSVY Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    pyCSVY Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSVY for Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Code Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Code Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    csvy
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            csvy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../readers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    readers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    validators
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            validators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csv_dialect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    csv_dialect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    registry
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    table_schema
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    table_schema
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      table_schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="table_schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.ColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      ColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.BooleanColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      BooleanColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.CommonValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      CommonValidator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CommonValidator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.CommonValidator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.CommonValidator.model_dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      model_dump
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.ConstraintsValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConstraintsValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.DateTimeColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      DateTimeColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.DefaultColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      DefaultColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatDateTime" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatDateTime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatDefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatDefault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatGeoJSON" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatGeoJSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatGeoPoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatGeoPoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatString" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatString
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.GeoJSONColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      GeoJSONColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.GeopointColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      GeopointColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.IntegerColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntegerColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.NumberColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumberColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.SchemaValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaValidator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SchemaValidator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.SchemaValidator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.SchemaValidator.model_dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      model_dump
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.StringColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.TypeEnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      TypeEnum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    writers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      table_schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="table_schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.ColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      ColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.BooleanColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      BooleanColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.CommonValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      CommonValidator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CommonValidator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.CommonValidator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.CommonValidator.model_dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      model_dump
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.ConstraintsValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConstraintsValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.DateTimeColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      DateTimeColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.DefaultColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      DefaultColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatDateTime" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatDateTime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatDefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatDefault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatGeoJSON" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatGeoJSON
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatGeoPoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatGeoPoint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.FormatString" class="md-nav__link">
+    <span class="md-ellipsis">
+      FormatString
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.GeoJSONColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      GeoJSONColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.GeopointColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      GeopointColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.IntegerColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntegerColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.NumberColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      NumberColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.SchemaValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      SchemaValidator
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SchemaValidator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.SchemaValidator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.SchemaValidator.model_dump" class="md-nav__link">
+    <span class="md-ellipsis">
+      model_dump
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.StringColumnValidator" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringColumnValidator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema.TypeEnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      TypeEnum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csvy.validators.table_schema-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>table_schema</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="csvy.validators.table_schema" class="doc doc-heading">
+            <code>csvy.validators.table_schema</code>
+
+
+<a href="#csvy.validators.table_schema" class="headerlink" title="Permanent link">¤</a></h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Module that contains validators for the table schema.</p>
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+<h3 id="csvy.validators.table_schema-attributes">Attributes<a href="#csvy.validators.table_schema-attributes" class="headerlink" title="Permanent link">¤</a></h3>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="csvy.validators.table_schema.ColumnValidator" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">ColumnValidator</span> <span class="o">=</span> <span class="n">Annotated</span><span class="p">[</span><span class="n">StringColumnValidator</span> <span class="o">|</span> <span class="n">NumberColumnValidator</span> <span class="o">|</span> <span class="n">IntegerColumnValidator</span> <span class="o">|</span> <span class="n">BooleanColumnValidator</span> <span class="o">|</span> <span class="n">DateTimeColumnValidator</span> <span class="o">|</span> <span class="n">GeopointColumnValidator</span> <span class="o">|</span> <span class="n">GeoJSONColumnValidator</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">discriminator</span><span class="o">=</span><span class="s1">&#39;type_&#39;</span><span class="p">)]</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+<a href="#csvy.validators.table_schema.ColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Annotated type for the ColumnValidator.</p>
+    </div>
+
+</div>
+<h3 id="csvy.validators.table_schema-classes">Classes<a href="#csvy.validators.table_schema-classes" class="headerlink" title="Permanent link">¤</a></h3>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.BooleanColumnValidator" class="doc doc-heading">
+            <code>BooleanColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.BooleanColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Validator for the boolean columns in the Table Schema.</p>
+<p>This class is used to validate the boolean columns in the Table Schema. It is based
+on the columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.BooleanColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.BOOLEAN">BOOLEAN</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, with valid values being 'boolean'.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.BooleanColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatDefault (csvy.validators.table_schema.FormatDefault)" href="#csvy.validators.table_schema.FormatDefault">FormatDefault</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format, with valid values being 'default' and
+None.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.BooleanColumnValidator.trueValues">trueValues</span></code></td>
+            <td>
+                  <code><span title="list">list</span>[<span title="str">str</span>] | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of strings that should be considered as True. If None,
+['true', 'True', 'TRUE', '1'] is used.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.BooleanColumnValidator.falseValues">falseValues</span></code></td>
+            <td>
+                  <code><span title="list">list</span>[<span title="str">str</span>] | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of strings that should be considered as False. If None,
+['false', 'False', 'FALSE', '0'] is used</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.CommonValidator" class="doc doc-heading">
+            <code>CommonValidator</code>
+
+
+<a href="#csvy.validators.table_schema.CommonValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+        <p>Validator for the columns in the Table Schema.</p>
+<p>This class is used to validate the columns in the Table Schema. It is based on the
+columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.CommonValidator.name">name</span></code></td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the column.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.CommonValidator.title">title</span></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A nicer human readable label or title for the field.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.CommonValidator.example">example</span></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An example value for the field.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.CommonValidator.description">description</span></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A description for the field.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.CommonValidator.constraints">constraints</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="ConstraintsValidator (csvy.validators.table_schema.ConstraintsValidator)" href="#csvy.validators.table_schema.ConstraintsValidator">ConstraintsValidator</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary of constraints for the field.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<h5 id="csvy.validators.table_schema.CommonValidator-functions">Functions<a href="#csvy.validators.table_schema.CommonValidator-functions" class="headerlink" title="Permanent link">¤</a></h5>
+
+<div class="doc doc-object doc-function">
+
+
+<h6 id="csvy.validators.table_schema.CommonValidator.model_dump" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">model_dump</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#csvy.validators.table_schema.CommonValidator.model_dump" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Dump the model to a dictionary.</p>
+<p>This method dumps the model to a dictionary. It sets exclude_unset to True and
+by_alias to True, so that only the attributes that were set are included in the
+dictionary and their aliases are always used.</p>
+<p>Finally, it converts the attributes that are Enum instances to their values.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary with the model attributes.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>csvy/validators/table_schema.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">model_dump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dump the model to a dictionary.</span>
+
+<span class="sd">    This method dumps the model to a dictionary. It sets exclude_unset to True and</span>
+<span class="sd">    by_alias to True, so that only the attributes that were set are included in the</span>
+<span class="sd">    dictionary and their aliases are always used.</span>
+
+<span class="sd">    Finally, it converts the attributes that are Enum instances to their values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A dictionary with the model attributes.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;exclude_unset&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;exclude_unset&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;by_alias&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;by_alias&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+            <span class="n">output</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">if</span> <span class="s2">&quot;constraints&quot;</span> <span class="ow">in</span> <span class="n">output</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">output</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">]:</span>
+        <span class="k">del</span> <span class="n">output</span><span class="p">[</span><span class="s2">&quot;constraints&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">output</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.ConstraintsValidator" class="doc doc-heading">
+            <code>ConstraintsValidator</code>
+
+
+<a href="#csvy.validators.table_schema.ConstraintsValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+        <p>Validator for the constraints in the Table Schema.</p>
+<p>This class is used to validate the constraints in the Table Schema. It is based on
+the constraints defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.required">required</span></code></td>
+            <td>
+                  <code><span title="bool">bool</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A boolean indicating if the value is required.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.unique">unique</span></code></td>
+            <td>
+                  <code><span title="bool">bool</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A boolean indicating if the value is unique.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.minimum">minimum</span></code></td>
+            <td>
+                  <code><span title="int">int</span> | <span title="float">float</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The minimum of the value. Applies to types: integer, number, date,
+time, datetime, year, yearmonth.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.maximum">maximum</span></code></td>
+            <td>
+                  <code><span title="int">int</span> | <span title="float">float</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The maximum value. Applies to types: integer, number, date,
+time, datetime, year, yearmonth.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.minLength">minLength</span></code></td>
+            <td>
+                  <code><span title="int">int</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The minimum length of the field. Applies to collections (string,
+array, object).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.maxLength">maxLength</span></code></td>
+            <td>
+                  <code><span title="int">int</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The maximum length of the field. Applies to collections (string,
+array, object).</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.pattern">pattern</span></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A regular expression pattern that the value must match. Applies to
+types: string.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.ConstraintsValidator.enum">enum</span></code></td>
+            <td>
+                  <code><span title="list">list</span>[<span title="typing.Any">Any</span>] | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of possible values for the field.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.DateTimeColumnValidator" class="doc doc-heading">
+            <code>DateTimeColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.DateTimeColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Validator for the datetime columns in the Table Schema.</p>
+<p>This class is used to validate the datetime columns in the Table Schema. It is based
+on the columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.DateTimeColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.DATETIME">DATETIME</span>, <span title="csvy.validators.table_schema.TypeEnum.DATE">DATE</span>, <span title="csvy.validators.table_schema.TypeEnum.TIME">TIME</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, with valid values being 'datetime'.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.DateTimeColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatDateTime (csvy.validators.table_schema.FormatDateTime)" href="#csvy.validators.table_schema.FormatDateTime">FormatDateTime</a> | <span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format. It can be 'default' or 'any', or a string
+with a custom format parsable by Python / C standard 'strptime', eg.
+'%d/%m/%y'.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.DefaultColumnValidator" class="doc doc-heading">
+            <code>DefaultColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.DefaultColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Default column validator for anything that does not have a specific one.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.DefaultColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.OBJECT">OBJECT</span>, <span title="csvy.validators.table_schema.TypeEnum.ARRAY">ARRAY</span>, <span title="csvy.validators.table_schema.TypeEnum.YEAR">YEAR</span>, <span title="csvy.validators.table_schema.TypeEnum.YEARMONTH">YEARMONTH</span>, <span title="csvy.validators.table_schema.TypeEnum.DURATION">DURATION</span>, <span title="csvy.validators.table_schema.TypeEnum.ANY">ANY</span>, None]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, valid values are any of the TypeEnum that
+do not have a specific validator.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.DefaultColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatDefault (csvy.validators.table_schema.FormatDefault)" href="#csvy.validators.table_schema.FormatDefault">FormatDefault</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format, with valid values being 'default' and
+None.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.FormatDateTime" class="doc doc-heading">
+            <code>FormatDateTime</code>
+
+
+<a href="#csvy.validators.table_schema.FormatDateTime" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+        <p>Enumeration of the formats for the Table Schema for the datetime type.</p>
+
+
+<details class="default" open>
+  <summary>Declares that the datetime objects follows the ISO8601 format.</summary>
+  <ul>
+<li>datetime: YYYY-MM-DD</li>
+<li>time: hh:mm:ss in 24-hour time and UTC timezone.</li>
+<li>datetime: YYYY-MM-DDThh:mm:ssZ in 24-hour time and UTC timezone.</li>
+</ul>
+</details>        <p>any: Any parsable datetime format.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.FormatDefault" class="doc doc-heading">
+            <code>FormatDefault</code>
+
+
+<a href="#csvy.validators.table_schema.FormatDefault" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+        <p>Enumeration of the possible formats for the Table Schema.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.FormatGeoJSON" class="doc doc-heading">
+            <code>FormatGeoJSON</code>
+
+
+<a href="#csvy.validators.table_schema.FormatGeoJSON" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+        <p>Enumeration of the formats for the Table Schema for the geojson type.</p>
+
+
+<details class="default" open>
+  <summary>Declares that the geojson objects are JSON objects that follow the</summary>
+  <p>GeoJSON specification.</p>
+</details>        <p>topojson: Declares that the geojson objects are JSON objects that follow the
+    TopoJSON specification.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.FormatGeoPoint" class="doc doc-heading">
+            <code>FormatGeoPoint</code>
+
+
+<a href="#csvy.validators.table_schema.FormatGeoPoint" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+        <p>Enumeration of the formats for the Table Schema for the geopoint type.</p>
+
+
+<details class="default" open>
+  <summary>Declares that the geopoint objects follows the ISO6709 format, ie.</summary>
+  <p>latitude and longitude, are provided as a string, eg. '37.7749,-122.4194'.</p>
+</details>        <p>array: Declares that the geopoint objects are an array with two numbers, eg.
+    [37.7749, -122.4194].
+object: Declares that the geopoint objects are  JSON object with with 'lon'
+    and 'lat' keys, eg. "{'lat': 37.7749, 'lon': -122.4194}".</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.FormatString" class="doc doc-heading">
+            <code>FormatString</code>
+
+
+<a href="#csvy.validators.table_schema.FormatString" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+        <p>Enumeration of the possible formats for the Table Schema for the string type.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.GeoJSONColumnValidator" class="doc doc-heading">
+            <code>GeoJSONColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.GeoJSONColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Validator for the geojson columns in the Table Schema.</p>
+<p>This class is used to validate the geojson columns in the Table Schema. It is based
+on the columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.GeoJSONColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.GEOJSON">GEOJSON</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, with valid values being 'geojson'.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.GeoJSONColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatGeoJSON (csvy.validators.table_schema.FormatGeoJSON)" href="#csvy.validators.table_schema.FormatGeoJSON">FormatGeoJSON</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format, with valid values being 'default',
+'topojson' and None.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.GeopointColumnValidator" class="doc doc-heading">
+            <code>GeopointColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.GeopointColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Validator for the geopoint columns in the Table Schema.</p>
+<p>This class is used to validate the geopoint columns in the Table Schema. It is based
+on the columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.GeopointColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.GEOPOINT">GEOPOINT</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, with valid values being 'geopoint'.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.GeopointColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatGeoPoint (csvy.validators.table_schema.FormatGeoPoint)" href="#csvy.validators.table_schema.FormatGeoPoint">FormatGeoPoint</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format, with valid values being 'default',
+'array', 'object' and None.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.IntegerColumnValidator" class="doc doc-heading">
+            <code>IntegerColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.IntegerColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Validator for the integer columns in the Table Schema.</p>
+<p>This class is used to validate the integer columns in the Table Schema. It is based
+on the columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.IntegerColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.INTEGER">INTEGER</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, with valid values being 'integer'.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.IntegerColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatDefault (csvy.validators.table_schema.FormatDefault)" href="#csvy.validators.table_schema.FormatDefault">FormatDefault</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format, with valid values being 'default' and
+None.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.IntegerColumnValidator.bareNumber">bareNumber</span></code></td>
+            <td>
+                  <code><span title="bool">bool</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If True, the number is a bare number, without any formatting. If
+None, True is used. If false the contents of this field may contain leading
+and/or trailing non-numeric characters that must be stripped to parse the
+number, eg. '95%', '£50'.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.NumberColumnValidator" class="doc doc-heading">
+            <code>NumberColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.NumberColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Validator for the number columns in the Table Schema.</p>
+<p>This class is used to validate the number columns in the Table Schema. It is based
+on the columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.NumberColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.NUMBER">NUMBER</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, with valid values being 'number'.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.NumberColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatDefault (csvy.validators.table_schema.FormatDefault)" href="#csvy.validators.table_schema.FormatDefault">FormatDefault</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format, with valid values being 'default' and
+None.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.NumberColumnValidator.decimalChar">decimalChar</span></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used to separate the integer and fractional. If
+None, '.' is used.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.NumberColumnValidator.groupChar">groupChar</span></code></td>
+            <td>
+                  <code><span title="str">str</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The character used to separate groups of thousands. None assumed.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.NumberColumnValidator.bareNumber">bareNumber</span></code></td>
+            <td>
+                  <code><span title="bool">bool</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If True, the number is a bare number, without any formatting. If
+None, True is used. If false the contents of this field may contain leading
+and/or trailing non-numeric characters that must be stripped to parse the
+number, eg. '95%', '£50.5'.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.SchemaValidator" class="doc doc-heading">
+            <code>SchemaValidator</code>
+
+
+<a href="#csvy.validators.table_schema.SchemaValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+        <p>Validator for the Table Schema in the CSVY file.</p>
+<p>This class is used to validate the Table Schema in the CSVY file. It is based on the
+schema defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.SchemaValidator.fields">fields</span></code></td>
+            <td>
+                  <code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="ColumnValidator = Annotated[StringColumnValidator | NumberColumnValidator | IntegerColumnValidator | BooleanColumnValidator | DateTimeColumnValidator | GeopointColumnValidator | GeoJSONColumnValidator, Field(discriminator='type_')]
+
+  
+      module-attribute
+   (csvy.validators.table_schema.ColumnValidator)" href="#csvy.validators.table_schema.ColumnValidator">ColumnValidator</a> | <a class="autorefs autorefs-internal" title="DefaultColumnValidator (csvy.validators.table_schema.DefaultColumnValidator)" href="#csvy.validators.table_schema.DefaultColumnValidator">DefaultColumnValidator</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of column validators.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<h5 id="csvy.validators.table_schema.SchemaValidator-functions">Functions<a href="#csvy.validators.table_schema.SchemaValidator-functions" class="headerlink" title="Permanent link">¤</a></h5>
+
+<div class="doc doc-object doc-function">
+
+
+<h6 id="csvy.validators.table_schema.SchemaValidator.model_dump" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">model_dump</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#csvy.validators.table_schema.SchemaValidator.model_dump" class="headerlink" title="Permanent link">¤</a></h6>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Dump the model to a dictionary.</p>
+<p>This method dumps the model to a dictionary. It sets exclude_unset to True and
+by_alias to True, so that only the attributes that were set are included in the
+dictionary and their aliases are always used.</p>
+<p>Finally, it converts the attributes that are Enum instances to their values.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dictionary with the model attributes.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+            <details class="quote">
+              <summary>Source code in <code>csvy/validators/table_schema.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">model_dump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dump the model to a dictionary.</span>
+
+<span class="sd">    This method dumps the model to a dictionary. It sets exclude_unset to True and</span>
+<span class="sd">    by_alias to True, so that only the attributes that were set are included in the</span>
+<span class="sd">    dictionary and their aliases are always used.</span>
+
+<span class="sd">    Finally, it converts the attributes that are Enum instances to their values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A dictionary with the model attributes.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;exclude_unset&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;exclude_unset&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;by_alias&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;by_alias&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">output</span><span class="p">[</span><span class="s2">&quot;fields&quot;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">field</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">field</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+    <span class="k">return</span> <span class="n">output</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.StringColumnValidator" class="doc doc-heading">
+            <code>StringColumnValidator</code>
+
+
+<a href="#csvy.validators.table_schema.StringColumnValidator" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="CommonValidator (csvy.validators.table_schema.CommonValidator)" href="#csvy.validators.table_schema.CommonValidator">CommonValidator</a></code></p>
+
+
+        <p>Validator for the string columns in the Table Schema.</p>
+<p>This class is used to validate the string columns in the Table Schema. It is based
+on the columns defined in the Table Schema specification.</p>
+
+
+<p><span class="doc-section-title">Attributes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.StringColumnValidator.type_">type_</span></code></td>
+            <td>
+                  <code><span title="typing.Literal">Literal</span>[<span title="csvy.validators.table_schema.TypeEnum.STRING">STRING</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying the type, with valid values being 'string'.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code><span title="csvy.validators.table_schema.StringColumnValidator.format_">format_</span></code></td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="FormatString (csvy.validators.table_schema.FormatString)" href="#csvy.validators.table_schema.FormatString">FormatString</a> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string specifying a format, with valid values being 'default',
+'email', 'uri', 'binary', 'uuid' and None.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h4 id="csvy.validators.table_schema.TypeEnum" class="doc doc-heading">
+            <code>TypeEnum</code>
+
+
+<a href="#csvy.validators.table_schema.TypeEnum" class="headerlink" title="Permanent link">¤</a></h4>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="str">str</span></code>, <code><span title="enum.Enum">Enum</span></code></p>
+
+
+        <p>Enumeration of the possible types for the Table Schema.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+<h3 id="csvy.validators.table_schema-functions">Functions<a href="#csvy.validators.table_schema-functions" class="headerlink" title="Permanent link">¤</a></h3>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
